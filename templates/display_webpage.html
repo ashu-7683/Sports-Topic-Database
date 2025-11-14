@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Topic</h1>
+        <table border="3px">
+            <tr>
+                <th>pk/id</th>
+                <th>topic_name</th>
+                <th>name</th>
+                <th>url</th>
+                <th>email</th>
+
+            </tr>
+            {% for WO in QLWO %}
+            <tr>
+                <td>{{WO.pk}}</td>
+                    <td>{{WO.topic_name}}</td>
+                    <td>{{WO.name}}</td> 
+                    <td>{{WO.url}}</td>
+                    <td>{{WO.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
