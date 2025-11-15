@@ -8,23 +8,14 @@ class CustomWebpage(admin.ModelAdmin):
     list_display=['topic_name','name','url','email','pk']
     list_display_links=['name','pk']
     list_editable=['email']
-    list_per_page=3
+    list_per_page=4
     search_fields=['name']
     list_filter=['topic_name']
     
-class CustomTopic(admin.ModelAdmin):
-    list_display=['topic_name']
-    search_fields=['topic_name']
-    
-class CustomAccessRecord(admin.ModelAdmin):
-    list_display=['name','date','author']
-    list_filter=['date']
-    
-    
 admin.site.site_header = "Django Topic Database"
 admin.site.site_title = "Admin Portal"
-admin.site.index_title = "Ashu"
+admin.site.index_title = "Sports"
 
-admin.site.register(Topic,CustomTopic)
+admin.site.register(Topic)
 admin.site.register(WebPage,CustomWebpage)
-admin.site.register(AccessRecord,CustomAccessRecord)
+admin.site.register(AccessRecord)
