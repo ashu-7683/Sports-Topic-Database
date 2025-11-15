@@ -11,15 +11,11 @@ class CustomWebpage(admin.ModelAdmin):
     list_per_page=4
     search_fields=['name']
     list_filter=['topic_name']
-
-
-class CustomTopic(admin.ModelAdmin):
-    list_display=['topic_name','pk']
     
 admin.site.site_header = "Django Sports Topic Database"
 admin.site.site_title = "Admin Portal"
 admin.site.index_title = "Sports"
 
-admin.site.register(Topic,CustomTopic)
+admin.site.register(Topic)
 admin.site.register(WebPage,CustomWebpage)
 admin.site.register(AccessRecord)
