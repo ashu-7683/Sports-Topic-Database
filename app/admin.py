@@ -22,6 +22,6 @@ admin.site.site_header = "Django Topic Database"
 admin.site.site_title = "Admin Portal"
 admin.site.index_title = "Sports"
 
-admin.site.register(Topic)
+admin.site.register(Topic,CustomTopic)
 admin.site.register(WebPage,CustomWebpage)
 admin.site.register(AccessRecord)
