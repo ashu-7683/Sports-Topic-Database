@@ -18,10 +18,19 @@ class CustomTopic(admin.ModelAdmin):
     list_per_page=4
     search_fields=['topic_name']
     
+    
+class CustomAccessRecord(admin.ModelAdmin):
+    list_display=['name','date','author','pk']
+    list_display_links=['name','pk']
+    list_per_page=4
+    search_fields=['name']
+    list_filter=['date']
+    
+    
 admin.site.site_header = "Django Topic Database"
 admin.site.site_title = "Admin Portal"
 admin.site.index_title = "Sports"
 
 admin.site.register(Topic,CustomTopic)
 admin.site.register(WebPage,CustomWebpage)
-admin.site.register(AccessRecord)
+admin.site.register(AccessRecord,CustomAccessRecord)
