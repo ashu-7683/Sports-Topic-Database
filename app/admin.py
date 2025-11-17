@@ -21,8 +21,9 @@ class CustomTopic(admin.ModelAdmin):
     
 class CustomAccessRecord(admin.ModelAdmin):
     list_display=['name','date','author','pk']
-    list_display_links=['name','pk']
-    list_per_page=4
+    list_display_links=['date','pk']
+    list_per_page=3
+    list_editable=['author']
     search_fields=['name']
     list_filter=['date']
     
